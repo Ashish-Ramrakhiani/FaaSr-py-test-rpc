@@ -14,8 +14,6 @@ jobs:
     container: ghcr.io/nolcut/ga-rpc-python:0.1.6
     env:
       SECRET_PAYLOAD: ${{ secrets.SECRET_PAYLOAD }}
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-      PAYLOAD_REPO: ${{ vars.PAYLOAD_REPO }}
       OVERWRITTEN: ${{ github.event.inputs.OVERWRITTEN }}
       PAYLOAD_URL: ${{ github.event.inputs.PAYLOAD_URL }}
     steps:
