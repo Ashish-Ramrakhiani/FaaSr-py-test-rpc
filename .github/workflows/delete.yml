@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/nolcut/ga-rpc-python:0.1.6
     env:
+      TOKEN: ${{ secrets.TOKEN }}
       SECRET_PAYLOAD: ${{ secrets.SECRET_PAYLOAD }}
       OVERWRITTEN: ${{ github.event.inputs.OVERWRITTEN }}
       PAYLOAD_URL: ${{ github.event.inputs.PAYLOAD_URL }}
@@ -21,3 +22,4 @@ jobs:
       run: |
         cd /action
         python3 faasr_start_invoke_github_actions.py
+
