@@ -11,7 +11,7 @@ on:
 jobs:
   run_docker_image:
     runs-on: ubuntu-latest
-    container: ghcr.io/nolcut/ga-rpc-python-r:0.1.7
+    container: ghcr.io/nolcut/ga-rpc-python-r:dev
     env:
       TOKEN: ${{ secrets.TOKEN }}
       SECRET_PAYLOAD: ${{ secrets.SECRET_PAYLOAD }}
